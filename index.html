@@ -14,15 +14,26 @@
             let randomInt = Math.ceil(Math.random()*3);
             
             switch(randomInt) {
-                case 1: computerChoice = 'rock';
-                case 2: computerChoice = 'paper';
-                case 3: computerChoice ='scissor';
+                case 1: 
+                    computerChoice = 'rock';
+                    break;
+                case 2: 
+                    computerChoice = 'paper';
+                    break;
+                case 3: 
+                    computerChoice ='scissor';
+                    break;
                 default: computerChoice ='well this should not be happening';
             }
 
             return computerChoice;
         }
 
+        function getPlayerChoice() {
+            let playerChoice = prompt('Select your choice (rock, paper or scissor)');
+            
+            return playerChoice;
+        }
 
     </script>
     
