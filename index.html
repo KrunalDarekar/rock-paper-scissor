@@ -72,7 +72,39 @@
 
         }
 
-        
+        function game() {
+            let playerScore = 0;
+            let computerScore = 0;
+
+            for (let i = 0; i < 5; i++) {
+                let computerSelection = getComputerChoice();
+                let playerSelection = getPlayerChoice();
+                
+                roundResult = playRound(playerSelection,computerSelection);
+                
+                if (roundResult === 'You have won the round!') {
+                    playerScore++;
+                } else if (roundResult === 'You have lost the round!') {
+                    computerScore++;
+                }
+
+                console.log(roundResult);
+                console.log(`your score ${playerScore}`)
+                console.log(`computer's score ${computerScore}`)
+            }
+
+            let gameResult;
+
+            if (playerScore > computerScore) {
+                gameResult = 'You have won the game, victory !!!';
+            } else if (playerScore < computerScore) {
+                gameResult = 'You have lost the game, defeat @_@';
+            } else {
+                gameResult = 'It`s a draw *_*';
+            }
+
+            console.log(gameResult);
+        }
 
     </script>
     
