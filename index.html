@@ -9,6 +9,21 @@
 <body>
     <script>
         
+        function getComputerChoice() {
+            let computerChoice;
+            let randomInt = Math.ceil(Math.random()*3);
+            
+            switch(randomInt) {
+                case 1: computerChoice = 'rock';
+                case 2: computerChoice = 'paper';
+                case 3: computerChoice ='scissor';
+                default: computerChoice ='well this should not be happening';
+            }
+
+            return computerChoice;
+        }
+
+
     </script>
     
 </body>
