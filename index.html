@@ -35,6 +35,46 @@
             return playerChoice;
         }
 
+        function playRound() {
+            let playerSelection = getPlayerChoice();
+            let computerSelection = getComputerChoice();
+            let result;
+            
+            playerSelection = playerSelection.toUpperCase();
+            computerSelection = computerSelection.toUpperCase();
+
+            if (playerSelection === 'ROCK') {
+                if (computerSelection === 'ROCK') {
+                    result = 'Ah! tie round';
+                } else if (computerSelection === 'SCISSOR') {
+                    result = 'You have won the round!';
+                } else {
+                    result = 'You have lost the round!';
+                }
+            } else if (playerSelection === 'PAPER') {
+                if (computerSelection === 'PAPER') {
+                    result = 'Ah! tie round';
+                } else if (computerSelection === 'ROCK') {
+                    result = 'You have won the round!';
+                } else {
+                    result = 'You have lost the round!';
+                }
+            } else {
+                if (computerSelection === 'SCISSOR') {
+                    result = 'Ah! tie round';
+                } else if (computerSelection === 'PAPER') {
+                    result = 'You have won the round!';
+                } else {
+                    result = 'You have lost the round!';
+                }
+            }
+            
+            return result;
+
+        }
+
+
+
     </script>
     
 </body>
