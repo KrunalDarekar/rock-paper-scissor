@@ -35,9 +35,8 @@
             return playerChoice;
         }
 
-        function playRound() {
-            let playerSelection = getPlayerChoice();
-            let computerSelection = getComputerChoice();
+        function playRound(playerSelection,computerSelection) {
+            
             let result;
             
             playerSelection = playerSelection.toUpperCase();
@@ -68,12 +67,12 @@
                     result = 'You have lost the round!';
                 }
             }
-            
+
             return result;
 
         }
 
-
+        
 
     </script>
     
